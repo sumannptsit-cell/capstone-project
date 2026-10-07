@@ -1,4 +1,4 @@
-# Tentmaker Open — Capstone 1
+# My Organization — Capstone 1
 
 ## Project Description
 
