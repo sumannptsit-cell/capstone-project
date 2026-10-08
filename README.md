@@ -110,15 +110,12 @@ Live site: https://sumannptsit-cell.github.io/capstone-project/
 ## How to run
 
 Open the live site in a browser.
-
 Alternatively, download the project files and open `index.html` in a browser.
-
 The page needs an internet connection because the application loads data from Google Sheet CSV links.
 
 ## Using another sheet
 
 The application uses four Google Sheet tabs:
-
 - People
 - Groups
 - Memberships
@@ -127,12 +124,10 @@ The application uses four Google Sheet tabs:
 The four CSV links are stored as constants at the top of `app.js`.
 
 To use another Google Sheet:
-
 1. Create the same four sheet tabs.
 2. Use the same column names.
 3. Set the Google Sheet sharing permission to "Anyone with the link - Viewer".
 4. Replace the Google Sheet ID in all four CSV links in `app.js`.
-
 No other JavaScript changes are required.
 
 ## Design note
@@ -140,9 +135,7 @@ No other JavaScript changes are required.
 ### Load - Store - Show
 
 The application loads data from four Google Sheet CSV links using the `loadTab()` function.
-
 The `loadAllData()` function loads the People, Groups, Memberships and Posts data and stores them in four JavaScript arrays.
-
 After loading, the application builds the sidebar menus and displays the selected view using the render functions.
 
 ### The four arrays
@@ -160,15 +153,11 @@ The application uses IDs to connect records between the arrays instead of hardco
 ### How a view is drawn
 
 When a user selects a group, leader or person, the corresponding click event calls a render function.
-
 For example, selecting a group calls `renderRoster()` or `renderGroupBoard()`.
-
 The render function finds the required records, filters and sorts the data, creates the required HTML and places it inside the `content` element.
 
 ### One decision I made, and why
 
 I use a `Set` when collecting leaders for the History view.
-
-This prevents the same leader from appearing more than once when a person has belonged to multiple groups led by the same leader.
-
-I also use `getDateValue()` when sorting posts so that invalid or missing dates do not cause the application to fail.
+ This prevents the same leader from appearing more than once when a person has belonged to multiple groups led by the same leader.
+ I also use`getDateValue()` when sorting posts so that invalid or missing dates do not cause the application to fail.
