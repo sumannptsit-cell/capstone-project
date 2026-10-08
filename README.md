@@ -36,7 +36,7 @@ No framework or build tool is required.
 
 Contains the structure of the webpage.
 
-### styles.css
+### style.css
 
 Controls the appearance of the webpage.
 
